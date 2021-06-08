@@ -162,32 +162,27 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer = Math.random()
+
 function game(user){
-    let userMove = 0;
-    let compMove = Math.ceil(computer * 3);
-    if (user === "Rock"){
-      userMove = 1;
-    }else if (user === "Paper"){
-      userMove = 2;
-    }else if(user === "Scissors"){
-      userMove = 3;
-    }
-    if (userMove = 0){
-      return "Failure to Launch"
-    }else if (userMove === compMove){
-      return "It's a tie!"
-    }else if (userMove > compMove && userMove !== 3){
-      return "You win!"
-    }else if (userMove === 1 && compMove === 3) {
-      return "You win!"
-    }else{
-      return "You lose!"
-    }
-}
-console.log(game("Rock", Math.random()))
-  
-  
+  let computer = Math.random();
+  if (computer <= 0.333){
+    computer = "Rock";
+  }else if (computer <= 0.666){
+    computer = "Paper";
+  }else{
+    computer = "Scissors";
+  }
+  if (user === computer){
+    return "it's a tie!";
+  }else if (user === "Rock" && computer === "Scissors"){
+    return "you win!";
+  }else if (user === "Scissors" && computer === "Paper"){
+    return "you win!";
+  }else if (user === "Paper" && computer === "Rock"){
+    return "you win!";
+  }else{
+    return "you lose!";}
+} 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -200,8 +195,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371
   }
 
 
@@ -214,8 +209,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
  
 
