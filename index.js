@@ -163,22 +163,22 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user){
-  let computer = Math.random();
-  if (computer <= 0.333){
-    computer = "Rock";
-  }else if (computer <= 0.666){
-    computer = "Paper";
-  }else{
-    computer = "Scissors";
-  }
+function game(user, computer){
+  // let computer = Math.random();
+  // if (computer <= 0.333){
+  //   computer = "rock";
+  // }else if (computer <= 0.666){
+  //   computer = "paper";
+  // }else{
+  //   computer = "scissors";
+  // }
   if (user === computer){
-    return "it's a tie!";
-  }else if (user === "Rock" && computer === "Scissors"){
+    return "it's a tie";
+  }else if (user === "rock" && computer === "scissors"){
     return "you win!";
-  }else if (user === "Scissors" && computer === "Paper"){
+  }else if (user === "scissors" && computer === "paper"){
     return "you win!";
-  }else if (user === "Paper" && computer === "Rock"){
+  }else if (user === "paper" && computer === "rock"){
     return "you win!";
   }else{
     return "you lose!";}
@@ -227,13 +227,12 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(soda){
   for(let i = 0; i < soda; i++){
-    let bottles = soda -i;
+    let bottles = soda - i;
     let newB = bottles - 1;
-    return bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass is around " + newB + " bottles of soda on the wall"
+    return bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass it around " + newB + " bottles of soda on the wall"
   }
 }
 
-console.log(annoyingSong(5))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
@@ -249,9 +248,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(percent){
+  if (percent >= 90 && percent <= 100){
+    return "you got an A"
+  }else if (percent >= 80 && percent <= 89){
+    return "you got a B"
+  }else if (percent >= 70 && percent <= 79){
+    return "you got a C"
+  }else if (percent >= 60 && percent <= 69){
+    return "you got a D"
+  }else{
+    return "you got an F"
   }
+}
   
   
 
