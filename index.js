@@ -17,8 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 21
+  if (votingAge >= 18){
+    console.log('1a true');
+  }else{
+    console.log('1a false')
+  }
 
 /*
 Task 1b - Values
@@ -31,6 +35,11 @@ Do the following:
    HINT: no function required
 */
 
+{let num1 = 2;
+let num2 = 3;
+num1 = num1 + num2
+console.log('1b', num1)
+}
 
 
 
@@ -110,7 +119,7 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(weight, age){
     if(age >= 1 && weight <= 5){
       return weight * 0.05;
-    }else if (age >= 1 && weight >=v6 && weight <=v10){
+    }else if (age >= 1 && weight >=6 && weight <=10){
       return weight * 0.04;
     }else if (age >= 1 && weight >= 11 && weight <= 15){
       return weight * 0.03;
