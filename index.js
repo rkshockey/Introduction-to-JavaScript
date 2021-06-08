@@ -54,7 +54,11 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+{
+  let string = '1999'
+  string = Number (string)
+  console.log('1c', string)
+}
 
 
 
@@ -67,8 +71,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
 
@@ -83,8 +87,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
 
 
@@ -158,10 +162,30 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
-function game(user, computer){
-    /*add your code here*/
+let computer = Math.random()
+function game(user){
+    let userMove = 0;
+    let compMove = Math.ceil(computer * 3);
+    if (user === "Rock"){
+      userMove = 1;
+    }else if (user === "Paper"){
+      userMove = 2;
+    }else if(user === "Scissors"){
+      userMove = 3;
+    }
+    if (userMove = 0){
+      return "Failure to Launch"
+    }else if (userMove === compMove){
+      return "It's a tie!"
+    }else if (userMove > compMove && userMove !== 3){
+      return "You win!"
+    }else if (userMove === 1 && compMove === 3) {
+      return "You win!"
+    }else{
+      return "You lose!"
+    }
 }
+console.log(game("Rock", Math.random()))
   
   
 
