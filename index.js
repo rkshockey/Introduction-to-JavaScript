@@ -225,11 +225,15 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(soda){
+  for(let i = 0; i < soda; i++){
+    let bottles = soda -i;
+    let newB = bottles - 1;
+    return bottles + " bottles of soda on the wall, " + bottles + " bottles of soda, take one down pass is around " + newB + " bottles of soda on the wall"
   }
+}
 
-
+console.log(annoyingSong(5))
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
